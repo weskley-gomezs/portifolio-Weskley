@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&family=Special+Elite&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Archivo Black", sans-serif;
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-serif-italic: "Playfair Display", serif;
+  --font-typewriter: "Special Elite", monospace;
+
+  --color-purple-electric: #7C3AED;
+  --color-coral-vibrant: #FF6B6B;
+  --color-lime-vibrant: #C6FF00;
+  --color-dark-pure: #0B0B0F;
+  --color-sand-base: #F5F0E8;
+  --color-tape-yellow: rgba(253, 224, 71, 0.6);
+  --color-tape-coral: rgba(255, 107, 107, 0.6);
+  --color-tape-green: rgba(198, 255, 0, 0.6);
+}
+
+/* Base styling overrides */
+html, body {
+  background-color: var(--color-sand-base);
+  color: var(--color-dark-pure);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom selection */
+::selection {
+  background-color: var(--color-lime-vibrant);
+  color: var(--color-dark-pure);
+}
+
+/* Background Paper Grain Overlay */
+.paper-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.045;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Scribbled/Slightly Wiggly Borders for that fanzine feel */
+.border-sketch {
+  border: 3px solid var(--color-dark-pure);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.border-sketch-sm {
+  border: 2px solid var(--color-dark-pure);
+  border-radius: 120px 10px 110px 12px/12px 110px 10px 120px;
+}
+
+/* Custom Scrollbar styled with our collage aesthetics */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-sand-base);
+  border-left: 3px solid var(--color-dark-pure);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-purple-electric);
+  border: 3px solid var(--color-dark-pure);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-coral-vibrant);
+}
+
+/* Hand-Drawn paper tear masks / layouts */
+.torn-edge-b {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V60Q30,80,60,50T120,70T180,40T240,80T300,50T360,65T420,45T480,85T540,55T600,75T660,45T720,80T780,50T840,75T900,45T960,85T1020,55T1080,75T1140,45T1200,80V0Z' fill='%23000'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V60Q30,80,60,50T120,70T180,40T240,80T300,50T360,65T420,45T480,85T540,55T600,75T660,45T720,80T780,50T840,75T900,45T960,85T1020,55T1080,75T1140,45T1200,80V0Z' fill='%23000'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+}
+
+.torn-edge-t {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,120V60Q30,30,60,70T120,40T180,80T240,50T300,75T360,45T420,80T480,55T540,75T600,40T660,80T720,50T780,75T840,40T900,80T960,50T1020,75T1080,45T1140,80T1200,40V120Z' fill='%23000'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,120V60Q30,30,60,70T120,40T180,80T240,50T300,75T360,45T420,80T480,55T540,75T600,40T660,80T720,50T780,75T840,40T900,80T960,50T1020,75T1080,45T1140,80T1200,40V120Z' fill='%23000'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+}
+
+/* Halftone dot pattern for background textures */
+.halftone-dots {
+  background-image: radial-gradient(var(--color-dark-pure) 1px, transparent 0);
+  background-size: 16px 16px;
+  opacity: 0.08;
+}
+
+/* Lined paper texture background for some cards */
+.lined-paper {
+  background-color: #faf8f5;
+  background-image: linear-gradient(#e2e2e2 1.5px, transparent 1.5px);
+  background-size: 100% 28px;
+}
+
+/* Graph paper texture */
+.graph-paper {
+  background-color: #faf8f5;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Infinite rotation helper for sticker spinners */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 15s linear infinite;
+}
+
+/* Infinite sliding marquee helper for Immersive UI ticker */
+@keyframes ticker-slide {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-33.33%, 0, 0); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker-slide 20s linear infinite;
+}
+
+/* Custom Paper Tear for clip-path from Immersive UI theme */
+.clip-path-paper-tear {
+  clip-path: polygon(0% 0%, 100% 5%, 98% 95%, 5% 100%, 0% 80%);
+}
+
+/* Wiggle keyframe for stickers/stamps on hover */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.wiggle-hover:hover {
+  animation: wiggle 0.4s ease-in-out infinite;
+}
+
+/* Paper shake for CTA */
+@keyframes paper-shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-2px, 2px) rotate(-1deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  60% { transform: translate(-2px, -1px) rotate(-0.5deg); }
+  80% { transform: translate(2px, 1px) rotate(1.5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.animate-shake {
+  animation: paper-shake 0.5s ease-in-out infinite;
+}

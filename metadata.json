@@ -1,0 +1,6 @@
+{
+  "name": "Portfólio Colagem Digital",
+  "description": "Portfólio criativo de colagem digital viva com storytelling visual, inspirado em fanzines de recorte e colagem com animações de scroll avançadas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
