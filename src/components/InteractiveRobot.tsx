@@ -166,7 +166,7 @@ export default function InteractiveRobot() {
   const eyeOffsetY = mousePos.y * 3.5;
 
   return (
-    <div ref={robotRef} className="fixed bottom-6 right-6 z-40 flex flex-col items-end pointer-events-none">
+    <div ref={robotRef} className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end pointer-events-none">
       
       {/* 1. Holographic Conversation & Diagnostic Interface */}
       <AnimatePresence>
@@ -176,7 +176,7 @@ export default function InteractiveRobot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.95 }}
             transition={{ type: 'spring', damping: 20 }}
-            className="w-[92vw] sm:w-[420px] max-h-[82vh] mb-5 bg-[#0d0d12] border-2 border-white/20 shadow-[10px_10px_0px_#0B0B0F] pointer-events-auto flex flex-col overflow-hidden relative"
+            className="w-[92vw] sm:w-[420px] max-h-[78vh] sm:max-h-[82vh] mb-4 sm:mb-5 bg-[#0d0d12] border-2 border-white/20 shadow-[6px_6px_0px_#0B0B0F] sm:shadow-[10px_10px_0px_#0B0B0F] pointer-events-auto flex flex-col overflow-hidden relative"
           >
             {/* Cyber Grid Overlay background */}
             <div className="absolute inset-0 graph-paper opacity-[0.04] pointer-events-none" />
@@ -401,13 +401,13 @@ export default function InteractiveRobot() {
               initial={{ opacity: 0, scale: 0.8, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.8 }}
-              className="mb-2.5 bg-dark-pure text-white border-2 border-white px-3 py-1.5 shadow-[4px_4px_0px_#C6FF00] pointer-events-auto cursor-pointer flex items-center gap-2 select-none"
+              className="mb-2 bg-dark-pure text-white border-2 border-white px-2.5 py-1.5 shadow-[3px_3px_0px_#C6FF00] sm:shadow-[4px_4px_0px_#C6FF00] pointer-events-auto cursor-pointer flex items-center gap-2 select-none"
               onClick={() => setIsOpen(true)}
               whileHover={{ scale: 1.05 }}
             >
               <span className="flex h-1.5 w-1.5 rounded-full bg-lime-vibrant" />
-              <span className="font-typewriter text-[9px] uppercase tracking-wider font-bold">
-                {isHoveringButton ? "UAU! ME CLICA AGORA! ⚡" : "FALAR COM ASSISTENTE INTELIGENTE"}
+              <span className="font-typewriter text-[8px] sm:text-[9px] uppercase tracking-wider font-bold whitespace-nowrap">
+                {isHoveringButton ? "UAU! ME CLICA AGORA! ⚡" : "ASSISTENTE VIRTUAL ⚡"}
               </span>
               <Sparkles className="w-3 h-3 text-lime-vibrant animate-pulse" />
             </motion.div>

@@ -54,43 +54,43 @@ export default function Hero() {
 
           {/* Kinetic Titles - moves upward on scroll */}
           <motion.div style={{ y: yTitle }} className="w-full relative z-10 flex flex-col">
-            <span className="text-sm md:text-base font-typewriter font-bold bg-dark-pure text-lime-vibrant px-3 py-1 self-start uppercase mb-4 tracking-wider rotate-[-2deg] shadow-[2px_2px_0px_#0B0B0F] border border-white">
+            <span className="text-xs md:text-sm font-typewriter font-bold bg-dark-pure text-lime-vibrant px-3 py-1 self-start uppercase mb-4 tracking-wider rotate-[-2deg] shadow-[2px_2px_0px_#0B0B0F] border border-white">
               [ DESIGNER & DESENVOLVEDOR PERSUASIVO ]
             </span>
             
-            <h1 className="text-5xl sm:text-7xl xl:text-8xl font-display font-black text-dark-pure tracking-tight leading-[0.9] uppercase">
+            <h1 className="text-4xl sm:text-7xl xl:text-8xl font-display font-black text-dark-pure tracking-tight leading-[0.9] uppercase">
               SITES FEITOS
               <span className="block text-purple-electric relative">
                 PARA GANHAR
-                <Tape color="yellow" className="w-40 -left-4 top-1/2 -translate-y-1/2 md:w-56" rotation={-2} />
+                <Tape color="yellow" className="w-32 sm:w-40 md:w-56 -left-4 top-1/2 -translate-y-1/2" rotation={-2} />
               </span>
               CLIENTES.
             </h1>
           </motion.div>
 
           {/* Slogan details and CTA */}
-          <div className="mt-8 relative max-w-xl">
+          <div className="mt-8 relative max-w-xl w-full">
             {/* Interactive draggable sticker label */}
             <motion.div
               drag
               dragConstraints={containerRef}
-              className="absolute -top-10 right-4 z-20 cursor-grab active:cursor-grabbing draggable-collage-item"
+              className="absolute -top-10 right-4 z-20 cursor-grab active:cursor-grabbing draggable-collage-item scale-75 sm:scale-100"
               whileHover={{ rotate: 5, scale: 1.05 }}
             >
               <Badge type="circle-seal" text="VENDAS DIÁRIAS" color="#FF6B6B" textColor="#0B0B0F" rotation={12} />
             </motion.div>
 
-            <div className="bg-white border-3 border-dark-pure p-6 shadow-[6px_6px_0px_#0B0B0F] relative rotate-[1deg] lined-paper">
-              <p className="font-sans text-base md:text-lg text-dark-pure leading-relaxed font-semibold">
+            <div className="bg-white border-3 border-dark-pure p-4 sm:p-6 shadow-[6px_6px_0px_#0B0B0F] relative rotate-[1deg] lined-paper">
+              <p className="font-sans text-sm sm:text-base md:text-lg text-dark-pure leading-relaxed font-semibold">
                 Olá, sou o <span className="underline decoration-coral-vibrant decoration-3 font-black">Weskley Gomes</span>. 
                 Eu crio sites premium de altíssima performance desenhados especificamente para capturar a atenção de quem quer comprar o seu produto ou serviço e transformá-los em novos clientes reais para a sua empresa.
               </p>
               
-              <div className="mt-6 flex flex-wrap gap-4 items-center">
+              <div className="mt-6 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
                 <a 
                   href="#projects"
                   data-cursor-text="VER TRABALHOS"
-                  className="bg-purple-electric hover:bg-dark-pure text-white font-display font-black px-6 py-3 border-3 border-dark-pure shadow-[4px_4px_0px_#0B0B0F] hover:shadow-none translate-y-0 hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150 uppercase text-sm tracking-wider inline-block text-center"
+                  className="bg-purple-electric hover:bg-dark-pure text-white font-display font-black px-6 py-3.5 border-3 border-dark-pure shadow-[4px_4px_0px_#0B0B0F] hover:shadow-none translate-y-0 hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150 uppercase text-xs tracking-wider text-center w-full sm:w-auto"
                 >
                   Ver Projetos ⚡
                 </a>
@@ -98,7 +98,7 @@ export default function Hero() {
                 <a 
                   href="#contact"
                   data-cursor-text="CONVERSAR"
-                  className="bg-lime-vibrant hover:bg-white text-dark-pure font-display font-black px-6 py-3 border-3 border-dark-pure shadow-[4px_4px_0px_#0B0B0F] hover:shadow-none translate-y-0 hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150 uppercase text-sm tracking-wider inline-block text-center"
+                  className="bg-lime-vibrant hover:bg-white text-dark-pure font-display font-black px-6 py-3.5 border-3 border-dark-pure shadow-[4px_4px_0px_#0B0B0F] hover:shadow-none translate-y-0 hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-150 uppercase text-xs tracking-wider text-center w-full sm:w-auto"
                 >
                   Falar no WhatsApp ✏️
                 </a>
@@ -210,7 +210,7 @@ export default function Hero() {
       <motion.div 
         drag
         dragConstraints={containerRef}
-        className="absolute bottom-10 left-12 w-24 h-8 bg-yellow-300 border-2 border-dark-pure rotate-[-12deg] z-0 flex items-center justify-center font-typewriter text-[9px] shadow-[2px_2px_0px_#0B0B0F] cursor-grab active:cursor-grabbing draggable-collage-item"
+        className="absolute bottom-10 left-12 w-24 h-8 bg-yellow-300 border-2 border-dark-pure rotate-[-12deg] z-0 hidden md:flex items-center justify-center font-typewriter text-[9px] shadow-[2px_2px_0px_#0B0B0F] cursor-grab active:cursor-grabbing draggable-collage-item"
       >
         <span>CONVERSÃO</span>
       </motion.div>
@@ -219,7 +219,7 @@ export default function Hero() {
       <motion.div 
         drag
         dragConstraints={containerRef}
-        className="absolute top-16 right-20 w-28 h-10 bg-purple-200 border-2 border-dark-pure rotate-[15deg] z-0 flex items-center justify-center font-mono text-[9px] font-bold shadow-[2px_2px_0px_#0B0B0F] cursor-grab active:cursor-grabbing draggable-collage-item"
+        className="absolute top-16 right-20 w-28 h-10 bg-purple-200 border-2 border-dark-pure rotate-[15deg] z-0 hidden md:flex items-center justify-center font-mono text-[9px] font-bold shadow-[2px_2px_0px_#0B0B0F] cursor-grab active:cursor-grabbing draggable-collage-item"
       >
         <span>ESTRATÉGIA</span>
       </motion.div>
