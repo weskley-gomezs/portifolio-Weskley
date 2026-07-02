@@ -58,7 +58,7 @@ const PLANS_DATA: Plan[] = [
     description: 'Estruturas otimizadas e táticas focadas em um único resultado: transformar cliques de campanhas pagas de visitantes em contatos diretos comerciais no seu WhatsApp.',
     priceType: 'fixed',
     originalPrice: 'R$ 499',
-    price: 'R$ 297',
+    price: 'R$ 397',
     priceSub: 'TAXA ÚNICA',
     priceNote: '*SEM TAXAS MENSAIS OCULTAS OU DEPENDÊNCIAS',
     deliverables: [
@@ -70,7 +70,7 @@ const PLANS_DATA: Plan[] = [
       'Instalação e testes de rastreamento (Pixel Meta, Google Analytics)'
     ],
     buttonText: 'SOLICITAR MINHA LANDING PAGE',
-    whatsappText: 'Olá Weskley! Tenho interesse na Landing Page de Alta Conversão de R$ 297.',
+    whatsappText: 'Olá Weskley! Tenho interesse na Landing Page de Alta Conversão de R$ 397.',
     color: '#C6FF00', // lime-vibrant
     badgeBg: '#7C3AED' // electric purple
   },

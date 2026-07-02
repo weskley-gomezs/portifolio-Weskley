@@ -21,7 +21,7 @@ const STRATEGIES: Record<string, NicheStrategy> = {
     strategy: 'Landing Page de Alta Conversão cirúrgica acoplada a campanhas de tráfego local (Meta Ads/Google Ads). Mostre sua especialidade, ambiente, depoimentos de pacientes e botão direto para o agendamento rápido no WhatsApp.',
     actionPlan: 'Instalação de Pixel de Rastreamento + Script de Conversão Imediata + Seção de Provas Sociais com alto contraste visual.',
     recommendedPlan: 'Landing Page de Alta Conversão',
-    price: 'R$ 297 (Taxa Única)',
+    price: 'R$ 397 (Taxa Única)',
     whatsappMessage: 'Olá Weskley! Fiz o diagnóstico com seu assistente virtual e ele me recomendou a Landing Page de Alta Conversão para meu consultório/clínica de saúde. Quero saber como começar!'
   },
   legal: {
@@ -39,7 +39,7 @@ const STRATEGIES: Record<string, NicheStrategy> = {
     strategy: 'Portfólio interativo de alta velocidade e Landing Page focada em conversão. O cliente precisa ver seus projetos executados com fotos de antes/depois impactantes e calcular um orçamento prévio em poucos cliques.',
     actionPlan: 'Otimização visual móvel (90% dos acessos são celulares) + Galeria de alta performance que não pesa no carregamento + Formulário rápido de pré-orçamento.',
     recommendedPlan: 'Landing Page de Alta Conversão',
-    price: 'R$ 297 (Taxa Única)',
+    price: 'R$ 397 (Taxa Única)',
     whatsappMessage: 'Olá Weskley! Fiz o teste com o assistente inteligente W-8D e gostaria do projeto de Landing Page de Alta Conversão para destacar meus serviços locais e portfólio. Vamos planejar?'
   },
   other: {
